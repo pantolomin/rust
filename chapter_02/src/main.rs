@@ -1,10 +1,10 @@
-use rand::Rng;
+use rand::RngExt;
 use std::cmp::Ordering;
 use std::io;
 
 fn main() {
     println!("Guess the number!");
-    let secret_number = rand::thread_rng().gen_range(1..=100);
+    let secret_number = rand::rng().random_range(1..=100);
 
     let mut iteration = 1;
     loop {
